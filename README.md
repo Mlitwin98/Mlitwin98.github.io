@@ -1,2 +1,2 @@
 # mateuszlitwin-portfolio
-Personal portfolio site
+Personal portfolio website
