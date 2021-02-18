@@ -5,27 +5,28 @@
         <meta charset="UTF-8">
         <title>Mateusz Litwin Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
         <header>
-        <a href="#" class="logo">CV</a> <!-- link do pobrania cv -->
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">O mnie</a></li>
-            <li><a href="#">Technologie</a></li>
-            <li><a href="#">Projekty</a></li>
-            <li><a href="#">Kontakt</a></li>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">O mnie</a></li>
+            <li><a href="#tech" onclick="toggleMenu()">Technologie</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projekty</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
         </ul>
         </header>
-        <section class="banner">
+        <section class="banner" id="home">
             <div class="textBx">
                 <h2>Hej, nazywam się <br><span>Mateusz Litwin.</span></h2>
-                <h3>Lorem Ipsum dolor</h3>
-                <a href="#" class="btn">O mnie</a>
+                <h3>Student infromatyki</h3>
+                <a href="#about" class="btn">O mnie</a>
+                <a href="#" class="btn">CV</a>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="heading">
                 <h2>O mnie</h2>
             </div>
@@ -48,16 +49,16 @@
                 </div>
             </div>
         </section>
-        <section class="tech">
+        <section class="tech" id="tech"> <!-- POPRAWIĆ, może tak jak u Andrew Novac-->
             <div class="heading white">
                 <h2>Poznane technologie</h2>
-                <p>Donec vestibulum aliquam laoreet. Maecenas lobortis ligula urna, at pharetra nisi dapibus vel.</p>
+                <p>Spis technologii, z którymi miałem trochę więcej do czynienia</p>
             </div>
             <div class="content">
                 <div class="techBx">
                     <img src="imgs/python.png">
                     <h2>Python</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Najczęściej używany język, z którym głównie wiążę przyszłość</p>
                 </div>
                 <div class="techBx">
                     <img src="imgs/django.png">
@@ -67,22 +68,22 @@
                 <div class="techBx">
                     <img src="imgs/csh.png">
                     <h2>C#</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Głównie używany w połączeniu z Unity, ale również do rozwiązywania zadań algorytmicznych</p>
                 </div>
                 <div class="techBx">
                     <img src="imgs/unity.png">
                     <h2>Unity</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>W wolnych chwilach pracuję nad własną grą 2D</p>
                 </div>
                 <div class="techBx">
                     <img src="imgs/sql.png">
                     <h2>SQL</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Bazy danych, pisanie zapytań i tworzenie raportów. Często używany w połączeniu z Django</p>
                 </div>
                 <div class="techBx">
                     <img src="imgs/html.png">
                     <h2>HTML</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Umiejętności wystarczająco do stworzenia kilku mniejszych projektów webowych</p>
                 </div>
                 <div class="techBx">
                     <img src="imgs/css.png">
@@ -92,14 +93,14 @@
                 <div class="techBx">
                     <img src="imgs/git.png">
                     <h2>GitHub</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Głównie korzystam z aplikacji GitHub Desktop</p>
                 </div>
             </div>
         </section>
-        <section class="projects"> <!-- do dopracowania, dodać opisy, porobić skriny, linki do git'a i/lub live -->
+        <section class="projects" id="projects"> <!-- do dopracowania, dodać opisy, porobić skriny, linki do git'a i/lub live -->
             <div class="heading">
                 <h2>Własne projekty</h2>
-                <p>Donec vestibulum aliquam laoreet. Maecenas lobortis ligula urna, at pharetra nisi dapibus vel.</p>
+                <p>Kilka prywatnych projektów wartych pokazania</p>
             </div>
             <div class="content">
                 <div class="projectsBx">
@@ -120,11 +121,68 @@
                 </div>
             </div>
         </section>
+        <section class="contact" id="contact">
+            <div class="heading white">
+                <h2>Kontakt</h2>
+            </div>
+            <div class="content">
+                <div class="contactInfo">
+                    <div class="contactInfoBox">
+                        <h3>Dane kontaktowe</h3>
+                        <div class="contactInfoBx">
+                            <div class="box">
+                                <div class="icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Adres</h3>
+                                    <p>Piaseczno<br>Sikorskiego 15/15</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Telefon</h3>
+                                    <p>668056916</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Mail</h3>
+                                    <p>m_litwin@wp.pl</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formBx">
+                    <form action="http://formspree.io/m_litwin@wp.pl" method="post" enctype="text/plain">
+                        <h3>Wyślij mi wiadomość</h3>
+                        <input type="text" name="" placeholder="Imię i nazwisko">
+                        <input type="email" name="" placeholder="Adres email">
+                        <textarea placeholder="Twoja wiadomosć"></textarea>
+                        <input type="submit" value="Wyślij">
+                    </form>
+                </div>
+            </div>
+        </section>
         <script type="text/javascript">
             window.addEventListener('scroll', function(){
                 var header = document.querySelector('header');
                 header.classList.toggle('sticky', window.scrollY > 0);
             });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
         </script>
     </body>
 </html>
