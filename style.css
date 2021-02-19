@@ -86,12 +86,7 @@ header.sticky
 
 header .logo
 {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 2px;
+    width: 40px;
 }
 
 header.sticky .logo
@@ -215,19 +210,28 @@ img
 .projects .content
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .projects .content .projectsBx
 {
-    width: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    padding-top: 0;
+    text-align: center;
 }
 
 .projects .content .projectsBx img
 {
-   max-width: 100%; 
+   min-width: 80%;
+   position: relative;
+   top:0; 
+   padding: 5px;
 }
 
 .contact
@@ -333,7 +337,10 @@ img
     margin-bottom: 0;
 }
 
-
+.rounded
+{
+    border-radius: 1rem;
+}
 
 
 @media (max-width: 991px)
@@ -452,7 +459,7 @@ img
 
     .projects .content .projectsBx
     {
-        width: 100%;
+        max-width: 100%;
         padding: 10px;
     }
 
