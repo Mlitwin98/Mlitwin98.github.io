@@ -6,6 +6,7 @@
         <title>Mateusz Litwin Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
         <header>
@@ -20,15 +21,15 @@
         </header>
         <section class="banner" id="home">
             <div class="textBx">
-                <h2>Hej, nazywam się <br><span>Mateusz Litwin.</span></h2>
-                <h3>Student infromatyki</h3>
-                <a href="#about" class="btn">O mnie</a>
-                <a href="#" class="btn">CV</a>
+                <h2 class='hey'>Hej, nazywam się <br><span class='name'>Mateusz Litwin.</span></h2>
+                <h3 class='student'>Student infromatyki</h3>
+                <a href="#about" class="btn homeBtn">O mnie</a>
+                <a href="#" class="btn homeBtn">CV</a>
             </div>
         </section>
         <section class="about" id="about">
             <div class="heading">
-                <h2>O mnie</h2>
+                <h2 class='aboutTitle'>O mnie</h2>
             </div>
             <div class="content">
                 <div class="contentBx w50">
@@ -162,11 +163,11 @@
                 </div>
                 <div class="formBx">
                     <form action="https://formspree.io/f/xleokwqo" method="post">
-                        <h3>Wyślij mi wiadomość</h3>
-                        <input type="text" name="fullName" placeholder="Imię i nazwisko">
-                        <input type="email" name="senderMail" placeholder="Adres email">
-                        <textarea name="message" placeholder="Twoja wiadomosć"></textarea>
-                        <input type="submit" value="Wyślij">
+                        <h3  class='frm'>Wyślij mi wiadomość</h3>
+                        <input type="text" name="fullName" placeholder="Imię i nazwisko"  class='frm'>
+                        <input type="email" name="senderMail" placeholder="Adres email"  class='frm'>
+                        <textarea name="message" placeholder="Twoja wiadomosć"  class='frm'></textarea>
+                        <input type="submit" value="Wyślij"  class='frm'>
                     </form>
                 </div>
             </div>
@@ -183,6 +184,34 @@
                 menuToggle.classList.toggle('active');
                 menu.classList.toggle('active');
             }
+
+            const sr = ScrollReveal({
+                origin: 'top',
+                distance: '80px',
+                duration: 2000,
+                reset: true
+            })
+
+            //HOME
+            sr.reveal('.hey',{})
+            sr.reveal('.name',{delay:200})
+            sr.reveal('.student',{delay:500})
+            sr.reveal('.homeBtn',{delay:1000,interval:200})
+
+            //ABOUT
+            sr.reveal('.contentBx',{})
+            sr.reveal('.img',{delay:200})
+
+            //TECH
+            sr.reveal('.contentBx',{})
+            sr.reveal('.techBx',{delay:200, interval:200})
+
+            //PROJECTS
+            sr.reveal('.projectsBx',{interval:300})
+
+            //CONTACT
+            sr.reveal('.box',{interval:400})
+            sr.reveal('.frm',{interval:200})
         </script>
     </body>
 </html>
