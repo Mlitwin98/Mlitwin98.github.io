@@ -165,6 +165,12 @@ header.sticky ul li a
     min-width: 50%;
 }
 
+.center
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 img
 {
     max-width: 100%;
