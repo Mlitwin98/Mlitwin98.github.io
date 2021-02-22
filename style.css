@@ -61,6 +61,15 @@ section
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+    min-width: 135px;
+    text-align: center;
+}
+
+.btn.outline
+{
+    background: none;
+    border: 2px solid;
+    border-color: #2196f3;
 }
 
 header
@@ -184,7 +193,8 @@ img
     padding: 40px 20px;
     background: #222;
     color: #fff;
-    max-width: 340px;
+    min-width: 400px;
+    max-width: 400px;
     margin: 20px;
     text-align: center;
     transition: 0.5s;
@@ -205,6 +215,8 @@ img
 {
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .projects .content
@@ -228,10 +240,24 @@ img
 
 .projects .content .projectsBx img
 {
-   min-width: 80%;
+   min-width: 50%;
    position: relative;
    top:0; 
    padding: 5px;
+}
+
+.projects .content .projectsBx .icons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .content .projectsBx .s16
+{
+    min-width: 48px;
+    max-width: 48px;
 }
 
 .contact
